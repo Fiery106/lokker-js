@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            partall
+            oddetall
         </title>
     </head>
 
@@ -11,10 +11,10 @@
     <body>
         <div>
             <h1>
-                Finn alle partallene mellom 0 og 100
+                Finn alle oddetallene mellom 0 og 100
             </h1>
 
-            <button onclick="pairsFunc()">
+            <button onclick="oddsFunc()">
                 Knapp
             </button>
 
@@ -27,15 +27,11 @@
             let output = document.getElementById("output");
 
 
-            function pairsFunc() {
+            function oddsFunc() {
                 let text = "";
 
-                for (i = 0; i < 101; i++) {
-                    if (i % 2 == 0) {
-                        text += `${i} <br>`;
-                    } else {
-                        continue;
-                    }
+                for (i = 1; i < 101; i+= 2) {
+                    text += `${i} <br>`
                 } output.innerHTML = text
             }
         </script>
