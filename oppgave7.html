@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            tall ganget med selv
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Vi ganger alle tallene med seg selv melllom 0 og 100. Klikk knappen for å se resultatet!
+            </h1>
+
+            <button onclick="multFunc()">
+                Knapp
+            </button>
+
+
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+
+            function multFunc() {
+                let result = "";
+
+                for (i = 0; i < 101; i++) {
+                    result += `${i} * ${i} = ${i * i} <br>`
+                } output.innerHTML = result
+            }
+        </script>
+    </body>
+</html>
