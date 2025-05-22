@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            hver femte tall
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Finn hver femte tall mellom 12 og 98
+            </h1>
+
+            <button onclick="test()">
+                Knapp
+            </button>
+
+
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+
+            function test() {
+                let i = 12;
+                let start = 0;
+                let amount = 98;
+                let text = "";
+
+                while (i < amount) {
+                    text += `${start + i } <br>`
+                    i += 5
+                } output.innerHTML = text
+            }
+        </script>
+    </body>
+</html>
