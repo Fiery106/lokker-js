@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            fra begynnelsen til slutten
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Skriver ut alle tallene fra begynnelsen helt til slutten som du bestemmer (funker begge veier!)
+            </h1>
+
+            <div>
+                <label>
+                    Begynnelse
+                </label>
+                <input type="number" id="start" />
+
+                <label>
+                    Slutt
+                </label>
+                <input type="number" id="end" />
+            </div>
+
+            <button onclick="test()">
+                Knapp
+            </button>
+
+
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+
+            function test() {
+                let start = Number(document.getElementById("start").value);
+                let end = Number(document.getElementById("end").value);
+
+                let text = "";
+
+                if (start && end) {
+                    if (start < end) {
+                        for (i = start; i < end + 1; i++) {
+                            text += `${i} <br>`
+                        } output.innerHTML = text
+
+                    } else if (start > end) {
+                        for (i = start; i > end - 1; i--) {
+                            text += `${i} <br>`
+                        } output.innerHTML = text
+
+                    } else {
+                        output.innerHTML = "Noe feil har oppstått"  
+                    }
+                } else {
+                    output.innerHTML = "Noe feil har oppstått"  
+                }
+            }
+        </script>
+    </body>
+</html>
