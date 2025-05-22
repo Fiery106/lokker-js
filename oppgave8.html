@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            while løkker
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Skriver ut tall fra 1-7 ved bruk av while løkker
+            </h1>
+
+            <button onclick="whileFunc()">
+                Knapp
+            </button>
+
+
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+            let amount = 7;
+            let i = 0;
+
+
+            function whileFunc() {
+                while (i < amount) {
+                    output.innerHTML += "Jeg er tall nummer " + (i + 1) + "<br>"
+                    i++
+                }
+            }
+        </script>
+    </body>
+</html>
